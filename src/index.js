@@ -1,6 +1,7 @@
 
 exports.min = function min (array) {
-  return 0;
+  return array.reduce( (minValue, currentValue) => 
+    minValue > currentValue ? currentValue : minValue, 0);
 }
 
 exports.max = function max (array) {
