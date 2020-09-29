@@ -6,7 +6,9 @@ exports.min = function min (array) {
 }
 
 exports.max = function max (array) {
-  return 0;
+  return (!array || !array.length) 
+    ? 0 
+    : array.reduce( (result, curr) => result < curr ? curr : result);
 }
 
 exports.avg = function avg (array) {
