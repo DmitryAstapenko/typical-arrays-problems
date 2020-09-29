@@ -1,7 +1,8 @@
 
-exports.min = function min (array) {
-  return array.reduce( (minValue, currentValue) => 
-    minValue > currentValue ? currentValue : minValue, 0);
+exports.min = function min (array) {  
+  return (!array || !array.length) 
+    ? 0 
+    : array.reduce( (result, curr) => result > curr ? curr : result);
 }
 
 exports.max = function max (array) {
